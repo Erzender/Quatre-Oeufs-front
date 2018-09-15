@@ -1,19 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { compose, createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import thunkMiddleware from 'redux-thunk';
+
+import Router from './views/Router';
+
+const store = createStore(compose(applyMiddleware(thunkMiddleware)));
 
 const App = () => (
-  <div className="App">
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <h1 className="App-title">Welcome to React</h1>
-    </header>
-    <p className="App-intro">
-      To get started, edit
-      <code>src/App.js</code>
-      and save to reload.
-    </p>
-  </div>
+  <Provider store={store}>
+    <Router />
+  </Provider>
 );
 
 export default App;
