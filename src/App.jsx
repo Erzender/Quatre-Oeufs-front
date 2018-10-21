@@ -7,9 +7,7 @@ import Router from './views/Router';
 const store = createStore(compose(applyMiddleware(thunkMiddleware)));
 const App = () => (
   <Provider store={store}>
-    {' '}
     <Router />
-    {' '}
   </Provider>
 );
 export default App;
