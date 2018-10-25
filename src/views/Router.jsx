@@ -3,6 +3,17 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 import Login from './Login';
 
+const styles = {
+  container: {
+    display: 'flex',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+  },
+};
+
 const Router = () => (
   <BrowserRouter>
     <App />
@@ -10,7 +21,7 @@ const Router = () => (
 );
 
 const App = () => (
-  <div>
+  <div style={styles.container}>
     <Route exact path="/" component={Login} />
   </div>
 );
