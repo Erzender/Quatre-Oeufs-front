@@ -30,7 +30,6 @@ const App = () => (
     <Route path="/board/game" component={Game} />
     <Route path="/board/options" component={Board} />
   </div>
-  
 );
 
 export default Router;
