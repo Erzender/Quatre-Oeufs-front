@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter, Route, Redirect } from 'react-router-dom';
 
 import Login from './Login';
+import Board from './Board/components/Board';
+import Game from './Game/components/Game';
 
 const styles = {
   container: {
@@ -23,8 +25,12 @@ const Router = () => (
 const App = () => (
   <div style={styles.container}>
     <Route exact path="/" render={() => <Redirect to="/login" />} />
-    <Route path="/" component={Login} />
+    <Route path="/login" component={Login} />
+    <Route path="/board" component={Board} />
+    <Route path="/board/game" component={Game} />
+    <Route path="/board/options" component={Board} />
   </div>
+  
 );
 
 export default Router;
