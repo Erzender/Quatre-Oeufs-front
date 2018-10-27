@@ -15,7 +15,7 @@ TCpt.defaultProps = {
 };
 
 const mapStateToProps = state => ({
-  _t: text => state.persistReducer.dictionnary[text] || text,
+  _t: text => state.persist.dictionnary[text] || text,
 });
 
 const mapDispatchToProps = () => {};

@@ -4,16 +4,29 @@ import {
 } from 'redux';
 import { Provider } from 'react-redux';
 import thunkMiddleware from 'redux-thunk';
+import { persistStore, persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
+import { PersistGate } from 'redux-persist/integration/react';
 
 import Router from './views/Router';
-import persistReducer from './persistDuck/reducer';
+import persist from './persistDuck/reducer';
 
-const rootReducer = combineReducers({ persistReducer });
+const rootReducer = combineReducers({ persist });
 
-const store = createStore(rootReducer, compose(applyMiddleware(thunkMiddleware)));
+const persistConfig = {
+  key: 'persist',
+  storage,
+};
+
+const persistedReducer = persistReducer(persistConfig, rootReducer);
+const store = createStore(persistedReducer, compose(applyMiddleware(thunkMiddleware)));
+const persistor = persistStore(store);
+
 const App = () => (
   <Provider store={store}>
-    <Router />
+    <PersistGate loading={null} persistor={persistor}>
+      <Router />
+    </PersistGate>
   </Provider>
 );
 export default App;
