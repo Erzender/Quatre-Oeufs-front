@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Redirect } from 'react-router-dom';
 
 import Login from './Login';
 
@@ -22,6 +22,7 @@ const Router = () => (
 
 const App = () => (
   <div style={styles.container}>
+    <Route exact path="/" render={() => <Redirect to="/login" />} />
     <Route path="/" component={Login} />
   </div>
 );
