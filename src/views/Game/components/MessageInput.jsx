@@ -1,18 +1,20 @@
 import React from 'react';
 
-const MessageInput = () => {
-    return (
-        <div>
-            <form>
-                <label>
-                    Chat:
-                    <input type="text" name="name" />
-                </label>
-                <input type="submit" value="Submit" />
-            </form>
-        </div>
-    )
-}
+const styles = {
+  def: {
+    display: 'flex',
+    flex: 1,
+    flexDirection: 'row',
+    minHeight: 50,
+    maxHeight: 50,
+  },
+};
 
+const MessageInput = () => (
+  <div style={styles.def}>
+    <input type="text" name="name" />
+    <button type="button">Submit</button>
+  </div>
+);
 
 export default MessageInput;

@@ -4,15 +4,20 @@ import Lobby from './Lobby';
 import Messages from './Messages';
 import MessageInput from './MessageInput';
 
+const styles = {
+  def: {
+    display: 'flex',
+    flex: 1,
+    flexDirection: 'column',
+  },
+};
 
-const Chat = () => {
-    return (
-        <div>
-            <Lobby />
-            <Messages />
-            <MessageInput />
-        </div>
-    )
-}
+const Chat = () => (
+  <div style={styles.chat}>
+    <Lobby />
+    <Messages />
+    <MessageInput />
+  </div>
+);
 
 export default Chat;

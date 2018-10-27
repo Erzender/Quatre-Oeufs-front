@@ -8,14 +8,16 @@ const styles = {
   container: {
     display: 'flex',
     backgroundColor: colors.main1,
-    flex: 2,
+    flex: 1,
+    minHeight: 100,
+    maxHeight: 100,
   },
   jeu: {
     display: 'flex',
     backgroundColor: colors.main3,
     flex: 1,
-    textAlign: 'center'
-  }
+    textAlign: 'center',
+  },
 };
 
 const BoardHeader = () => (
@@ -29,12 +31,6 @@ const BoardHeader = () => (
   </div>
 );
 
-/* const LoginForm = () => (
-    <div style={styles.container}>
-      <T text="Welcome to Quatre Oeufs" style={styles.jeu} />
-    </div>
-  );
- */
 BoardHeader.propTypes = {};
 
 export default BoardHeader;
