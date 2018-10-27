@@ -1,11 +1,13 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 
-import LoginForm from './LoginForm'
+import colors from '../../../assets/colors';
+import LoginForm from '../containers/LoginForm';
 
 const styles = {
   container: {
-    backgroundColor: '#333333',
+    display: 'flex',
+    backgroundColor: colors.main1,
     flex: 1,
   },
 };

@@ -22,7 +22,7 @@ const Router = () => (
 
 const App = () => (
   <div style={styles.container}>
-    <Route exact path="/" component={Login} />
+    <Route path="/" component={Login} />
   </div>
 );
 
