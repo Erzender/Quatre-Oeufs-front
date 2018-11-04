@@ -7,11 +7,12 @@ import thunkMiddleware from 'redux-thunk';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import { PersistGate } from 'redux-persist/integration/react';
+import { reducer as formReducer } from 'redux-form';
 
 import Router from './views/Router';
 import persist from './persistDuck/reducer';
 
-const rootReducer = combineReducers({ persist });
+const rootReducer = combineReducers({ persist, form: formReducer });
 
 const persistConfig = {
   key: 'persist',

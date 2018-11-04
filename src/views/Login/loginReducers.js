@@ -1,6 +1,12 @@
 import { VALIDATE_REGISTER_FORM } from './loginActions';
 
-const initialState = {};
+const initialState = {
+  register: {
+    name: '',
+    psw: '',
+    psw_repeat: '',
+  },
+};
 
 const register = (state = initialState, action = {}) => {
   switch (action.type) {

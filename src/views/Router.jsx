@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Redirect } from 'react-router-dom';
 
 import Login from './Login';
 import Board from './Board/components/Board';
-import RegisterForm from './Login/components/RegisterForm';
+import RegisterForm from './Login/containers/RegisterForm';
 // import Game from './Game/components/Game';
 
 const styles = {
