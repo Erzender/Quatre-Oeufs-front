@@ -11,8 +11,9 @@ import { reducer as formReducer } from 'redux-form';
 
 import Router from './views/Router';
 import persist from './persistDuck/reducer';
+import register from './views/Login/loginReducers';
 
-const rootReducer = combineReducers({ persist, form: formReducer });
+const rootReducer = combineReducers({ persist, form: formReducer, register });
 
 const persistConfig = {
   key: 'persist',

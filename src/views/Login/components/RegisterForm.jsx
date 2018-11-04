@@ -34,15 +34,11 @@ let RegisterForm = ({ onValidateRegisterForm }) => (
   </form>
 );
 
-RegisterForm = reduxForm({
-  form: 'register',
-})(RegisterForm);
-
 RegisterForm.propTypes = {
   onValidateRegisterForm: PropTypes.func.isRequired,
 };
 
-const reduxRegisterForm = reduxForm({ form: 'register' });
+const reduxRegisterForm = reduxForm({ form: 'register' })(RegisterForm);
 
 export default reduxRegisterForm;
 // export default RegisterForm;
