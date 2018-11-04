@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RegisterForm = () => (
+const RegisterForm = props => (
   //   <div style={styles.container}>
   <div>
     <label htmlFor="email">
@@ -22,7 +22,7 @@ const RegisterForm = () => (
       <a href="https://policies.google.com/privacy?hl=en&gl=ZZ">Terms & Privacy</a>
 .
     </p>
-    <button type="submit" className="registerbtn">
+    <button type="submit" className="registerbtn" onClick={props.onValidateRegisterForm}>
       Register
     </button>
   </div>
