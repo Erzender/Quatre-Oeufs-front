@@ -27,7 +27,7 @@ const App = () => (
   <div style={styles.container}>
     <Route exact path="/" render={() => <Redirect to="/login" />} />
     <Route path="/login" component={Login} />
-    <Route path="/regiser" component={RegisterForm} />
+    <Route path="/register" component={RegisterForm} />
     <Route path="/board" component={Board} />
   </div>
 );
