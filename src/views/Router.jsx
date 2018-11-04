@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Redirect } from 'react-router-dom';
 
 import Login from './Login';
 import Board from './Board/components/Board';
+import RegisterForm from './Login/components/RegisterForm';
 // import Game from './Game/components/Game';
 
 const styles = {
@@ -26,6 +27,7 @@ const App = () => (
   <div style={styles.container}>
     <Route exact path="/" render={() => <Redirect to="/login" />} />
     <Route path="/login" component={Login} />
+    <Route path="/regiser" component={RegisterForm} />
     <Route path="/board" component={Board} />
   </div>
 );
