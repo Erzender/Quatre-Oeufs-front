@@ -18,7 +18,7 @@ const mapStateToProps = state => ({
   _t: text => state.persist.dictionnary[text] || text,
 });
 
-const mapDispatchToProps = () => {};
+const mapDispatchToProps = () => ({});
 
 export default connect(
   mapStateToProps,
